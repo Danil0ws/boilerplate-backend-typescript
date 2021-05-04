@@ -1,0 +1,54 @@
+{
+  "name": "base-modules-nodejs",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Base create module for node.js",
+  "main": "dist/index.js",
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.16",
+    "@babel/preset-env": "^7.13.15",
+    "@sucrase/jest-plugin": "^2.1.0",
+    "@types/jest": "^26.0.22",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^14.14.41",
+    "@types/node-fetch": "^2.5.10",
+    "dotenv": "^8.2.0",
+    "jest": "^26.6.3",
+    "nodemon": "^2.0.7",
+    "rimraf": "^3.0.2",
+    "sucrase": "^3.18.1",
+    "ts-jest": "^26.5.5",
+    "typescript": "^4.2.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DANIL0Ws/base-modules-nodejs.git"
+  },
+  "keywords": [
+    "javascript",
+    "npm",
+    "modules",
+    "node"
+  ],
+  "author": "Buff Developers",
+  "bugs": {
+    "url": "https://github.com/DANIL0Ws/base-modules-nodejs/issues"
+  },
+  "homepage": "https://github.com/DANIL0Ws/base-modules-nodejs#readme",
+  "scripts": {
+    "dev": "npx nodemon  src/index.ts",
+    "prebuild": "npx rimraf dist",
+    "build": "npx sucrase ./src -d ./dist --transforms typescript,imports",
+    "test": "npx jest"
+  },
+  "jest": {
+    "transform": {
+      ".(js|jsx|ts|tsx)": "@sucrase/jest-plugin"
+    }
+  }
+}
