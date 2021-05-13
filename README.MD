@@ -75,7 +75,7 @@ By default, runs tests related to files changed since the last commit.
 ### `npm run build` or `yarn build`
 
 Builds the app for production to the `dist` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+It correctly bundles Module in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.<br>
 
@@ -89,4 +89,4 @@ We are grateful to the authors of existing related projects for their ideas and 
 
 ## License
 
-Create Module Nodejs is open source software [licensed as MIT](https://github.com/facebook/create-react-app/blob/master/LICENSE). The Create React App logo is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/).
+Create Module Nodejs is open source software [licensed as MIT](https://github.com/Danil0ws/base-modules-nodejs/blob/master/LICENSE). The Create Module Node.js  logo is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/).
