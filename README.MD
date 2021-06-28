@@ -1,6 +1,6 @@
-# Create Module Node.js
+# Boilerplate Module Node.js
 
-Create Module Node.js with TypeScript and Test(Jest).
+Boilerplate Module Node.js with TypeScript and Test(Jest).
 
 Create Module Node.js works on macOS, Windows, and Linux.
 If something doesn’t work, please [file an issue](https://github.com/Danil0ws/base-modules-nodejs/issues/new).
