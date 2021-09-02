@@ -6,24 +6,30 @@
   "main": "dist/index.js",
   "dependencies": {},
   "devDependencies": {
-
     "@types/jest": "^26.0.22",
-
     "@types/node": "^14.14.41",
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "@typescript-eslint/parser": "^4.30.0",
     "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^5.1.0",
     "jest": "^26.6.3",
     "rimraf": "^3.0.2",
     "ts-jest": "^26.5.5",
     "ts-node-dev": "^1.1.8",
     "tsconfig-paths": "^3.11.0",
+    "tscpaths": "^0.0.9",
     "typescript": "^4.2.4"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/.git"
   },
-  "keywords": [    
-  ],
+  "keywords": [],
   "author": "",
   "bugs": {
     "url": "https://github.com//issues"
@@ -31,8 +37,9 @@
   "homepage": "https://github.com/#readme",
   "scripts": {
     "dev": "tsnd --respawn --inspect --transpile-only -r tsconfig-paths/register src/index.ts",
-    "prebuild": "rimraf dist",
-    "build": "tsc && tscpaths -p tsconfig.json -s ./src -o ./dist",
+    "prebuild": "rimraf out",
+    "start": "node out/index.js",
+    "build": "tsc --project tsconfig.build.json && tscpaths -p tsconfig.json -s ./src -o ./dist",
     "test": "jest"
   }
 }
