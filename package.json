@@ -1,57 +1,38 @@
 {
-  "name": "base-modules-nodejs",
+  "name": "boilerplate-backend-typescript",
   "version": "1.0.0",
   "license": "MIT",
-  "description": "Base create module for node.js",
+  "description": "Base create",
   "main": "dist/index.js",
-  "files": [
-    "lib"
-  ],
-  "dependencies": {
-    
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.13.16",
-    "@babel/preset-env": "^7.13.15",
-    "@sucrase/jest-plugin": "^2.1.0",
+
     "@types/jest": "^26.0.22",
-    "@types/mocha": "^8.2.2",
+
     "@types/node": "^14.14.41",
-    "@types/node-fetch": "^2.5.10",
-    "jaguarjs-jsdoc": "^1.1.0",
-    "dotenv": "^8.2.0",
+    "eslint": "^7.32.0",
     "jest": "^26.6.3",
-    "jsdoc": "^3.6.6",
-    "nodemon": "^2.0.7",
     "rimraf": "^3.0.2",
-    "sucrase": "^3.18.1",
     "ts-jest": "^26.5.5",
+    "ts-node-dev": "^1.1.8",
+    "tsconfig-paths": "^3.11.0",
     "typescript": "^4.2.4"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/DANIL0Ws/base-modules-nodejs.git"
+    "url": "https://github.com/.git"
   },
-  "keywords": [
-    "javascript",
-    "npm",
-    "modules",
-    "node"
+  "keywords": [    
   ],
-  "author": "Buff Developers",
+  "author": "",
   "bugs": {
-    "url": "https://github.com/DANIL0Ws/base-modules-nodejs/issues"
+    "url": "https://github.com//issues"
   },
-  "homepage": "https://github.com/DANIL0Ws/base-modules-nodejs#readme",
+  "homepage": "https://github.com/#readme",
   "scripts": {
-    "dev": "npx nodemon  src/index.ts",
-    "prebuild": "npx rimraf dist",
-    "build": "npx sucrase ./src -d ./dist --transforms typescript,imports",
-    "test": "npx jest"
-  },
-  "jest": {
-    "transform": {
-      ".(js|jsx|ts|tsx)": "@sucrase/jest-plugin"
-    }
+    "dev": "tsnd --respawn --inspect --transpile-only -r tsconfig-paths/register src/index.ts",
+    "prebuild": "rimraf dist",
+    "build": "tsc && tscpaths -p tsconfig.json -s ./src -o ./dist",
+    "test": "jest"
   }
 }

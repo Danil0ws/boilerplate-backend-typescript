@@ -1,4 +1,4 @@
-import index from '../src/index'
+import index from '~/index'
 
 describe('E2E Index', () => {
     it('should start index', async () => {
